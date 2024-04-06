@@ -1,0 +1,41 @@
+{
+    "name": "phpcolor/apple-colors",
+    "description": "Apple Colors - PHP Color Palette",
+    "license": "MIT",
+    "type": "library",
+    "keywords": [
+        "apple",
+        "color",
+        "palette",
+        "php",
+        "theme"
+    ],
+    "authors": [
+        {
+            "name": "Simon André",
+            "email": "smn.andre@gmail.com"
+        },
+        {
+            "name": "Raphaël Geffroy",
+            "email": "raphael@geffroy.dev"
+        }
+    ],
+    "homepage": "https://phpcolor.dev/colors/",
+    "support": {
+        "issues": "https://github.com/phpcolor/colors/issues",
+        "source": "https://github.com/phpcolor/colors/"
+    },
+    "require": {
+        "php": ">=8.3"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": { "Phpcolor\\Colors\\Apple\\": "" }
+    },
+    "extra": {
+        "thanks": {
+            "name": "phpcolor/colors",
+            "url": "https://github.com/phpcolor/colors"
+        }
+    }
+}
