@@ -1,9 +1,6 @@
-# Apple Colors
-
----
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna
-aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+<h1 align="center">Apple Colors</h1>
+<p align="center">This package provides access to the color palettes used in Apple interfaces.</p>
+<img src="Resources/colors.svg" alt="Apple Colors" width="100%">
 
 ## Installation
 
@@ -13,19 +10,15 @@ composer require phpcolor/apple-colors
 
 ## Usage
 
-```php
-use PhpColor\Color\Apple\iOS\Colors as Colors;
 
-$color = Colors::RED;
+---
 
-$color = Colors::red(200);
-
-```
+![Apple Colors](Resources/colors.svg)
 
 
-## PhpColor 
+## Credits
 
-This library is part of the [PhpColor](https://phpcolor.dev) project.
+The colors listed in this project are based on the colors used by [Apple](https://www.apple.com/). 
 
 
 ## License
