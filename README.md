@@ -1,7 +1,6 @@
 <h1 align="center">Apple Colors</h1>
 <p align="center">This package provides access to the color palettes used in Apple interfaces.</p>
 <img src="Resources/colors.svg" alt="Apple Colors" width="100%">
-<p align="center"><a href="https://phpcolor.dev/"><img src="https://phpcolor.dev/phpcolor.svg" alt="PhpColor" width="80"></a></p>
 
 ## Installation
 
@@ -14,7 +13,6 @@ composer require phpcolor/apple-colors
 ### Color Palettes
 
 ```php
-
 use PhpColor\Colors\Apple\AppleColors as Apple;
 
 $colors = Apple::iOS(); // iOS & iPadOS
@@ -62,6 +60,8 @@ echo $colors->blue;             // #007AFF
 echo $colors->get('indigo');    // #5856D6
 ```
 
+---
+
 ![Apple Colors](Resources/colors.svg)
 
 ## Credits
@@ -70,4 +70,4 @@ The colors listed in this project are based on the colors used by [Apple](https:
 
 ## License
 
-This library is released under the [MIT license](LICENSE)
+This [PHPColor](https://phpcolor.dev) package is released under the [MIT license](LICENSE).

@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 /*
- * This file is part of the PhpColor library.
+ * This file is part of the PHPColor library.
  *
  * (c) Simon André & Raphaël Geffroy
  *
