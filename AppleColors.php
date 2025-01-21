@@ -32,6 +32,11 @@ final class AppleColors extends \stdClass implements \IteratorAggregate, \Counta
         return self::create('iOS', $theme);
     }
 
+    public static function iPadOS(string $theme = self::THEME_LIGHT): self
+    {
+        return self::create('iOS', $theme);
+    }
+
     public static function macOS(string $theme = self::THEME_LIGHT): self
     {
         return self::create('macOS', $theme);

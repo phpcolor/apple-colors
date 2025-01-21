@@ -15,7 +15,8 @@ composer require phpcolor/apple-colors
 ```php
 use PhpColor\Colors\Apple\AppleColors as Apple;
 
-$colors = Apple::iOS(); // iOS & iPadOS
+$colors = Apple::iOS();
+$colors = Apple::iPadOS();
 $colors = Apple::macOS();
 $colors = Apple::tvOS();
 $colors = Apple::visionOS();
