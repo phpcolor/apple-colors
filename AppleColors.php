@@ -19,7 +19,7 @@ namespace PhpColor\Colors\Apple;
 final class AppleColors extends \stdClass implements \IteratorAggregate, \Countable
 {
     /**
-     * @var array<string, array<string, string>>
+     * @var array<string, mixed>
      */
     private static array $files = [];
 
@@ -63,13 +63,31 @@ final class AppleColors extends \stdClass implements \IteratorAggregate, \Counta
             throw new \InvalidArgumentException(sprintf('The theme "%s" does not exist.', $theme));
         }
 
-        $file = self::$files[$file] ??= require __DIR__.'/Resources/colors/'.$file.'.php';
+        if (!isset(self::$files[$file])) {
+            self::$files[$file] = require __DIR__.'/Resources/colors/'.$file.'.php';
+        }
 
-        return new self($theme ? $file[$theme] : $file);
+        $fileData = self::$files[$file];
+
+        if ($theme) {
+            if (!is_array($fileData) || !isset($fileData[$theme])) {
+                throw new \RuntimeException(sprintf('Theme "%s" not found in file "%s".', $theme, $file));
+            }
+            /** @var array<string, array{string, int[]}> */
+            $colors = $fileData[$theme];
+        } else {
+            if (!is_array($fileData)) {
+                throw new \RuntimeException(sprintf('Invalid data structure in file "%s".', $file));
+            }
+            /** @var array<string, array{string, int[]}> */
+            $colors = $fileData;
+        }
+
+        return new self($colors);
     }
 
     /**
-     * @param array<string, array{string, string[]}> $colors
+     * @param array<string, array{string, int[]}> $colors
      */
     private function __construct(private readonly array $colors)
     {
